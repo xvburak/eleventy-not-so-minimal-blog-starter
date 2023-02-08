@@ -19,7 +19,6 @@ html, body {
 body {
   box-sizing: border-box;
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
   line-height: 140%;
   padding: 1rem;
@@ -129,6 +128,7 @@ img.small {
 }
 
 a {
+
   text-decoration: none;
   color: $darker-accent;
   
@@ -140,7 +140,6 @@ a {
 a:hover {
   color: $accent-shade;
 }
-
 
 nav {
   ul {
