@@ -1,20 +1,70 @@
 <!doctype html>
 <html lang="{{ metadata.language }}">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
-    <title>{{ title or metadata.title }}</title>
-    {% include "../components/metadata.njk" %}
-    <script type="module" src="/assets/svg-icon-sprite.js"></script>
-    <link rel="stylesheet" href="{{'/assets/theme.css' | url }}" />
-  </head>
 
-  <body>
-    {% include "../components/header.njk" %}
-    <main role="main">
-      {{ content | safe }}
-    </main>
-    {% include "../components/footer.njk" %}
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍎</text></svg>">
+  <title>{{ title or metadata.title }}</title>
+  {% include "../components/metadata.njk" %}
+  <script type="module" src="/assets/svg-icon-sprite.js"></script>
+  <link rel="stylesheet" href="{{'/assets/theme.css' | url }}" />
+</head>
+
+<body>
+  {# {% include "../components/header.njk" %} #}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <main role="main">
+    {{ content | safe }}
+  </main>
+  {# {% include "../components/footer.njk" %} #}
+
+  <script>
+    var sliderObjects = [];
+    createSliderObjects();
+
+    function plusDivs(obj, n) {
+      var parentDiv = $(obj).parent();
+      var matchedDiv;
+      $.each(sliderObjects, function (i, item) {
+        if ($(parentDiv[0]).attr('id') == $(item).attr('id')) {
+          matchedDiv = item;
+          return false;
+        }
+      });
+      matchedDiv.slideIndex = matchedDiv.slideIndex + n;
+      showDivs(matchedDiv, matchedDiv.slideIndex);
+    }
+
+    function createSliderObjects() {
+      var sliderDivs = $('.slider');
+      $.each(sliderDivs, function (i, item) {
+        var obj = {};
+        obj.id = $(item).attr('id');
+        obj.divContent = item;
+        obj.slideIndex = 1;
+        obj.slideContents = $(item).find('.mySlides');
+        showDivs(obj, 1);
+        sliderObjects.push(obj);
+      });
+    }
+
+    function showDivs(divObject, n) {
+      debugger;
+      var i;
+      if (n > divObject.slideContents.length) {
+        divObject.slideIndex = 1
+      }
+      if (n < 1) {
+        divObject.slideIndex = divObject.slideContents.length
+      }
+      for (i = 0; i < divObject.slideContents.length; i++) {
+        divObject.slideContents[i].style.display = "none";
+      }
+      divObject.slideContents[divObject.slideIndex - 1].style.display = "block";
+    }
+  </script>
+</body>
+
 </html>

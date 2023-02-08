@@ -11,6 +11,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias('article', 'layouts/article')
 
   eleventyConfig.addPassthroughCopy('./src/assets/icons')
+  eleventyConfig.addPassthroughCopy("./src/assets/fonts");
   eleventyConfig.addPassthroughCopy('./src/assets/sprite.svg')
   eleventyConfig.addPassthroughCopy({
       'node_modules/svg-icon-sprite/dist/svg-icon-sprite.js': 'assets/svg-icon-sprite.js'
@@ -26,8 +27,8 @@ module.exports = function(eleventyConfig) {
   })
 
   /* Creating a collection of blogposts by filtering based on folder and filetype */
-  eleventyConfig.addCollection('blog', (collectionApi) => {
-    return collectionApi.getFilteredByGlob('./src/blog/*.md').reverse()
+  eleventyConfig.addCollection('projects', (collectionApi) => {
+    return collectionApi.getFilteredByGlob('./src/projects/*.md').reverse()
   })
   eleventyConfig.addCollection('categoryList', require('./src/_11ty/getCategoryList'))
   eleventyConfig.addCollection('categories', require('./src/_11ty/createCategories'))
@@ -44,7 +45,8 @@ module.exports = function(eleventyConfig) {
       input: 'src',
       output: '_site',
       includes: '_includes',
-      data: '_data'
+      data: '_data',
+  
     },
     markdownTemplateEngine: 'njk'
   }

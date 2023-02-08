@@ -8,13 +8,13 @@ eleventyExcludeFromCollections: true
     <subtitle>{{ metadata.summary }}</subtitle>
     <link href="{{ metadata.feedUrl }}" rel="self"/>
     <link href="{{ metadata.url }}"/>
-    <updated>{{ collections.blog | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+    <updated>{{ collections.projects | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
     <id>{{ metadata.url }}</id>
     <author>
         <name>Claudia R</name>
     </author>
 
-    {%- for article in collections.blog -%}
+    {%- for article in collections.projects -%}
     {% set absolutePostUrl %}{{ article.url | url | absoluteUrl(metadata.url) }}{% endset %}
     <entry>
         <title>{{ article.data.title }}</title>

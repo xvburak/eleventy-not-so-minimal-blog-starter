@@ -1,12 +1,12 @@
 {
-  "title": "Eleventy Not so minimal blog starter",
-  "url": "https://eleventy-not-so-minimal-blog-starter.netlify.app",
+  "title": "Vasil Burak",
+  "url": "https://vasilburak.com",
   "language": "en",
-  "description": "Build your own website + blog with the 'not so minimal blog starter' which uses the Eleventy static site generator.",
+  "description": "I like researching, designing and programing stuff.",
   "author": {
-    "name": "firstname lastname",
-    "email": "hello@blog.com"
+    "name": "Vasil Burak",
+    "email": "hi@vasilburak.com"
   },
   "image": "/assets/social-image.jpg",
-  "feedUrl": "https://eleventy-not-so-minimal-blog-starter.netlify.app/feed.xml"
+  "feedUrl": "https://vasilburak.com/feed.xml"
 }
