@@ -5,23 +5,12 @@ key: home
 order: 1
 ---
 
-# Welcome
-This starter will help you build a relatively simple blog with a few key features, while using the Eleventy static site generator.
+# Vasil Burak *(xvburak)*
+I like researching, designing and programing stuff. <br> I love the soft in software.
 
-This eleventy starter already includes:
-- Basic site navigation with eleventy-navigation
-- Blog categories & category based navigation
-- Image optimisation with Eleventy-img
-- SVG icons with svg-icon-sprite
-- SEO (sitemap, metadata, robots.txt)
-- RSS feed
-- Luxon for handling dates & times
-- A few basic Eleventy configurations, filters and shortcodes
-- Nunjucks templates
-- Sass & the necessary scripts to compile Sass
+## Currently
+- Working on community-software.agdx and cafe-society.agdx.
+- Observing and sharing local opportunities for [encounters](https://brno.encounter.tips/).
 
-<br>
-
-You can find the <a href="https://github.com/Mangamaui/eleventy-not-so-minimal-blog-starter" target="_blank">source code on GitHub</a>.
-
-<br><br>
+## Elsewhere
+[email](mailto:burak.vasil@gmail.com), [are.na](https://are.na/xvburak), [github](https://github.com/xvburak), [spotify](https://open.spotify.com/user/b8x6za2revm4efzdovn8ocz9d?si=d354815040c24456)
