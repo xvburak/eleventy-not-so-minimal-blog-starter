@@ -6,7 +6,7 @@ order: 1
 ---
 
 # Vasil Burak *(xvburak)*
-I like researching, designing and programing stuff. <br> I love the soft in software.
+I like researching, designing and programming stuff. <br> I love the soft in software.
 
 ## Currently
 - Working on community-software.agdx and cafe-society.agdx.
