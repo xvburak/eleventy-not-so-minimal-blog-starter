@@ -12,8 +12,8 @@ html, body {
   scroll-behavior: smooth;
 
   /* Better Font Rendering =========== */
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -43,9 +43,9 @@ h1 {
   line-height: 100%;
   font-weight: normal;
 
-  em {
-    color: $lightest-shade;
-  }
+  // em {
+  //   color: $lightest-shade;
+  // }
 }
 
 h2,
@@ -53,7 +53,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $lightest-shade;
+  // color: $lightest-shade;
   font-family: $main-font;
   line-height: 100%;
   font-size: 1rem;
